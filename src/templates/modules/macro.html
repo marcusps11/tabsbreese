@@ -1,0 +1,7 @@
+<!-- SVG icon macro
+Params - name: Name of svg icon, class: classes to add to svg tag, wrapper: creates wrapper around icon with classes specified -->
+{% macro icon(name, class, wrapper) %}
+  {% if wrapper %} <span class="icon-wrap {{ wrapper }}"> {% endif %}
+    <svg class="icon {{ class }}"><use xlink:href="/images/icons.svg#icon-{{ name }}"></use></svg>
+  {% if wrapper %} </span> {% endif %}
+{% endmacro %}

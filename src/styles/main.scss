@@ -1,0 +1,133 @@
+// Site variables and mixins
+@import "mixins";
+@import "variables";
+
+// bower:scss
+// endbower
+
+// ----- Bootstrap -----
+
+// To edit bootstrap setup delete the bower:scss above and uncomment below as needed
+// Edit bootstrap variables and put them into the sites variables file without the default keyword
+// AND/OR
+// Copy bootstrap folder from the Bootstrap bower folder and put it in app/styles. Edit the bootstrap scss file as needed change reference that instead e.g. @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding"; TO @import "bootstrap/scaffolding";
+// DONT EDIT IN THE BOWER FOLDER
+
+// // Core variables and mixins
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+// Reset and dependencies
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/normalize";
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/print";
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/glyphicons";
+
+// Core CSS
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/type";
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/code";
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/grid";
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/tables";
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/forms";
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+
+// // Components
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/component-animations";
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/dropdowns";
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/button-groups";
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/input-groups";
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/navs";
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/navbar";
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/breadcrumbs";
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/pagination";
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/pager";
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/labels";
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/badges";
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/jumbotron";
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/thumbnails";
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/alerts";
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/progress-bars";
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/media";
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/list-group";
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/panels";
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/wells";
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/close";
+
+// // Components w/ JavaScript
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/modals";
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/tooltip";
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/popovers";
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/carousel";
+
+// // Utility classes
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/utilities";
+// @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/responsive-embed";
+
+
+// Site styles
+$screen-xxs-max: $screen-xs-min - 1;
+
+@import "base";
+@import "layout";
+@import "modules/navigation/navigation";
+@import "modules/sections/trailer";
+@import "modules/sections/team";
+@import "modules/sections/photos";
+
+
+
+
+// ----- Responsive breakpoints examples to copy and paste to other file -----
+
+/* stylelint-disable */
+
+// ----- XS - 479px and down -----
+@media (max-width: $screen-xxs-max) {
+
+}
+
+// 480px and up
+@media (min-width: $screen-xs-min) {
+
+}
+
+// 767px and down
+@media (max-width: $screen-xs-max) {
+
+}
+
+
+// ----- SM - 768px and up -----
+@media (min-width: $screen-sm-min) {
+
+}
+
+// 768px - 991px
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+
+}
+
+// 991px and down
+@media (max-width: $screen-sm-max) {
+
+}
+
+
+// ----- MD - 992px and up  -----
+@media (min-width: $screen-md-min) {
+
+}
+
+// 992px - 1999px
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+
+}
+
+
+// ----- LG - 1200px and up -----
+@media (min-width: $screen-lg-min) {
+
+}
+
+/* stylelint-enable */

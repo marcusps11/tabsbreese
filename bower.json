@@ -1,0 +1,18 @@
+{
+  "name": "vccp-dev-static-site-seed",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "modernizr": "~2.8.1",
+    "svgxuse": "^1.1.17"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": []
+    }
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}

@@ -1,0 +1,18 @@
+
+@mixin breakpoint($viewport) {
+	@if $viewport == xLargeDisplay {
+		@media (min-width: 1200px) { @content ; }
+	}
+
+	@if $viewport == largeDisplay {
+		@media (min-width: 992px) { @content ; }
+	}
+
+	@if $viewport == midDisplay {
+		@media (min-width: 640px) { @content ; }
+	}
+
+	@if $viewport == smallDisplay {
+		@media (max-width: 767px) { @content ; }
+	}
+}

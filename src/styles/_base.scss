@@ -1,0 +1,173 @@
+// ----- Basic styles -----
+
+// Text styles
+body {
+  font-size: 1.4rem;
+  font-weight: 300;
+  background: #FCFCFC
+}
+
+/* stylelint-disable number-no-trailing-zeros  */
+h1, .h1 { font-size: 3.9rem; }
+h2, .h2 { font-size: 3.0rem; }
+h3, .h3 { font-size: 2.4rem; }
+h4, .h4 { font-size: 1.8rem; }
+h5, .h5 { font-size: 1.5rem; }
+h6, .h6 { font-size: 1.4rem; }
+/* stylelint-enable */
+
+@media (max-width: $screen-xs-max) {
+  html {
+    font-size: 9px; // Reduce font size on mobile
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+// section {
+//   height: 100vh;
+//   width: 100%;
+// }
+
+// ----- SVG icons -----
+// Icons should be on 100x100px canvas and have a max width/height of 99px for better anti aliasing.
+.icon-wrap, .icon {
+  display: inline-block;
+  position: relative;
+  top: -0.1em;
+}
+
+  .icon {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    vertical-align: middle;
+  }
+
+// Reduces icon size to text height
+  .icon--inline {
+    height: 0.8em;
+    width: 0.8em;
+  }
+
+// Icon wrapper for adding a background to an icon
+.icon-wrap {
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: .25em;
+  border-radius: 50%;
+  transition: background-color .3s, color .3s;
+
+  .icon {
+    top: 0;
+    width: inherit;
+    height: inherit;
+    padding: .25em; // Adjust padding the change icon size
+  }
+  // If the icon-wrap is being positioned in an absolutely positioned div set the vertical-align of the icon to initial to ensure correct positioning
+  // .overlay & .icon {
+  //   vertical-align: initial;
+  // }
+}
+
+.icon-wrap--blue {
+  color: #fff;
+  background: #419eda linear-gradient(to bottom, rgba(65, 158, 218, 0.1) 0%, #2f7cb4 100%);
+
+  a:hover & {
+    background-color: #378cc6;
+  }
+}
+
+.toggle {
+
+  .icon use {
+    transition: transform .25s;
+    transform-origin: center;
+
+    &:nth-child(2) {
+      transform: rotate(90deg) scaleX(1); // Transition is smoother if itial state of transform is specified (scaleX will scale vertically as it is rotated)
+    }
+  }
+
+  &:hover {
+    .icon use {
+      &:nth-child(2) {
+        transform: rotate(90deg) scaleX(0);
+      }
+    }
+  }
+
+}
+
+
+
+// ----- Layout -----
+
+// Custom containers and columns
+.fullwidth {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 100%;
+  clear: both;
+  @include clearfix();
+}
+
+.fullwidth-lg {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.fullwidth-sm {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.fullwidth-bg, .fullwidth-np {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.fullwidth-bg {
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// Flexbox equal height columns - http://codepen.io/bootstrapped/pen/RrabNe
+@media (min-width: $screen-sm-min) {
+  .row-col-eq-desk {
+    display: flex;
+    flex-wrap: nowrap;
+
+    > div[class*='col-'] {
+      display: flex;
+      flex: 0 1 auto;
+      flex-direction: column;
+    }
+  }
+}
+// Horrible IE <= 11 hack for its broken flexbox implementation
+// @media all and (min-width: $screen-sm-min) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+//   .row-col-eq-desk, .row-col-eq-desk > div[class*='col-'], .row-col-eq-desk > div[class*='col-'] > .card, .row-col-eq-desk > div[class*='col-'] > .card-block {
+//     display: block;
+//   }
+// }
+
+    .col-p-no {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .col-p-sm {
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+
+    .col-p-lg {
+      padding-left: 30px;
+      padding-right: 30px;
+    }

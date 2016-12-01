@@ -1,0 +1,58 @@
+// ----- Header -----
+.header {
+  background-color: #ddd;
+}
+
+  .logo {
+    float: left;
+    margin: 10px 0;
+  }
+
+  .nav-primary {
+    float: right;
+    margin: 10px 0;
+
+    a {
+      padding: 2px;
+      margin-left: 10px;
+
+      &:hover,
+      &:focus,
+      &.active {
+        color: #666;
+      }
+    }
+  }
+
+@media (min-width: $screen-sm-min) {
+  .nav-mobile-toggle {
+    display: none;
+  }
+}
+
+
+// ----- Footer -----
+.footer {
+  padding: 10px 0;
+  font-size: 1.2rem;
+  background: #ddd;
+
+  .nav-social {
+    float: right;
+
+    a {
+      padding: 2px 4px;
+      margin-left: 10px;
+      font-size: 2rem;
+      color: #fff;
+    }
+  }
+}
+
+  .nav-footer {
+
+    a {
+      padding: 2px;
+      margin-right: 10px;
+    }
+  }

@@ -1,0 +1,15 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "max-empty-lines": 3,
+    "indentation": null,
+    "at-rule-empty-line-before": [ "always", {
+      except: [ "blockless-group", "first-nested" ],
+      ignore: ["after-comment", "all-nested"]
+    } ],
+    "selector-list-comma-newline-after": "always-multi-line",
+    "selector-no-id": true,
+    "max-nesting-depth": 3,
+    "number-leading-zero": null,
+  }
+}

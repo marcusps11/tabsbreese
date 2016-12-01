@@ -1,0 +1,36 @@
+nav {
+	height: 60px;
+	background-color: #9a4242;
+	position: relative;
+	ul {
+		height: 100%;
+
+		li {
+			display: block;
+			color: #fff;
+
+		}
+	}
+
+
+}
+
+
+@include breakpoint(midDisplay) {
+
+	nav {
+		ul {
+			li {
+				display: inline-block;
+				float: right;
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%);
+				padding-right: 3%;
+			}
+		}
+
+
+	}
+
+}
