@@ -8,20 +8,24 @@ class Photos {
   }
 
   setVars() {
-    this.overlay = $('<div id="overlay"></div>');
-    this.image = $("<img>");
-    this.overlay.append(this.image);
-    $('body').append(this.overlay);
+    this.overlay = document.querySelector('#overlay')
+    this.image = Array.from(document.querySelectorAll('.image-gallery'));
   }
 
   addListeners() {
 
-    $("#photo-gallery img").click(this.updateOverlay.bind(this));
+    // $('#photo-gallery img').click(this.updateOverlay.bind(this));
+
+    this.image.forEach((image) => { image.addEventListener('click', this.updateOverlay.bind(this))})
+
   }
 
   updateOverlay(event) {
-    console.log(this)
-    let imageLocation = $(this).attr('href');
+    console.log(event.path[0]);
+    // this.overlay.classList.add('active'); 
+    // let imageLocation = $(this).attr('href');
+    // this.overlay.style.display = 'block';
+    // console.log(this.overlay.style.display);
   }
 
 

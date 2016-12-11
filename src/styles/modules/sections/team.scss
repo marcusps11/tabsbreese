@@ -25,6 +25,11 @@
 	}
 }
 
+#overlay {
+	display: none;
+	background: red;
+}
+
 
 @include breakpoint(midDisplay) {
 	.crew-container {

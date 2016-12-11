@@ -1,6 +1,25 @@
 .section-photos {
   text-align: center;
+  display: block;
+  height: 100%;
 }
+
+
+.myOverlay {
+  display: block;
+  height: 100%;
+}
+
+.photos-container {
+  ul {
+    width: 550px;
+    li {
+      width: 30%;
+      float: left;
+    }
+  }
+}
+
 
 #photos {
   opacity: .88;
@@ -31,6 +50,10 @@ ul {
   left: 0;
   display: none;
   text-align: center;
+
+  &.active {
+    display: block;
+  }
 }
 
 #overlay img {
